@@ -1,0 +1,534 @@
+/* Coin Shop Page Styles */
+.coin-shop-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f8f9ff 0%, #e8ecff 100%);
+  padding: 2rem;
+}
+
+.coin-shop-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 350px;
+  gap: 2rem;
+  align-items: start;
+}
+
+/* Left Column */
+.coin-shop-left {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Section Titles */
+.section-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin: 0 0 1.5rem 0;
+}
+
+/* Coin Packages Section */
+.coin-packages-section {
+  background: white;
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.packages-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.coin-package {
+  background: white;
+  border: 2px solid #e9ecef;
+  border-radius: 15px;
+  padding: 1.5rem;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  min-height: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.coin-package:hover {
+  border-color: #667eea;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.15);
+}
+
+.coin-package.selected {
+  border-color: #667eea;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 35px rgba(102, 126, 234, 0.25);
+}
+
+.package-bonus-badge {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background: #dc3545;
+  color: white;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.25rem 0.5rem;
+  border-radius: 10px;
+  border: 2px solid white;
+}
+
+.coin-package.selected .package-bonus-badge {
+  background: #ff6b6b;
+}
+
+.package-coins {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #667eea;
+}
+
+.coin-package.selected .package-coins {
+  color: white;
+}
+
+.package-price {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+}
+
+.coin-package.selected .package-price {
+  color: white;
+}
+
+.package-bonus-text {
+  font-size: 0.85rem;
+  color: #28a745;
+  font-weight: 500;
+}
+
+.coin-package.selected .package-bonus-text {
+  color: #a8e6cf;
+}
+
+/* Custom Amount Section */
+.custom-amount-section {
+  background: white;
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.custom-amount-input {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.custom-amount-input input {
+  width: 100%;
+  padding: 1rem 1.5rem;
+  border: 2px solid #e9ecef;
+  border-radius: 15px;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.custom-amount-input input:focus {
+  border-color: #667eea;
+}
+
+.currency-label {
+  position: absolute;
+  right: 1.5rem;
+  color: #6c757d;
+  font-weight: 600;
+  pointer-events: none;
+}
+
+/* Payment Methods Section */
+.payment-methods-section {
+  background: white;
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.payment-methods-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.payment-method {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  border: 2px solid #e9ecef;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.payment-method:hover {
+  border-color: #667eea;
+  transform: translateY(-2px);
+}
+
+.payment-method.selected {
+  border-color: #667eea;
+  background: #f8f9ff;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.15);
+}
+
+.payment-method-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1rem;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.payment-logo {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.payment-method-icon.vnpay {
+  background: linear-gradient(135deg, #0055a4, #004080);
+}
+
+.payment-method-icon.momo {
+  background: linear-gradient(135deg, #d81b60, #c2185b);
+}
+
+.payment-method-icon.zalopay {
+  background: linear-gradient(135deg, #00c851, #007e33);
+}
+
+.payment-method-icon.bank {
+  background: linear-gradient(135deg, #6c757d, #495057);
+}
+
+.payment-method-icon.qr {
+  background: linear-gradient(135deg, #28a745, #20c997);
+}
+
+.payment-method-icon.card {
+  background: linear-gradient(135deg, #9c27b0, #7b1fa2);
+}
+
+/* Disabled payment methods */
+.payment-method.disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  background: #f8f9fa;
+  border-color: #dee2e6;
+}
+
+.payment-method.disabled:hover {
+  transform: none;
+  border-color: #dee2e6;
+  box-shadow: none;
+}
+
+.payment-method-icon.disabled {
+  background: #6c757d !important;
+  opacity: 0.5;
+}
+
+.payment-method-icon.disabled .payment-logo {
+  opacity: 0.5;
+}
+
+.payment-method.disabled .payment-method-name {
+  color: #6c757d;
+}
+
+.payment-method-status {
+  position: absolute;
+  right: 1rem;
+  font-size: 0.75rem;
+  color: #dc3545;
+  font-weight: 500;
+}
+
+.payment-method-name {
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.payment-method.selected .payment-method-name {
+  color: #667eea;
+}
+
+.payment-method i.bi-check-circle-fill {
+  position: absolute;
+  right: 1rem;
+  color: #667eea;
+  font-size: 1.2rem;
+}
+
+/* Benefits Section */
+.benefits-section {
+  background: white;
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.benefit-card {
+  text-align: center;
+  padding: 1.5rem;
+  border-radius: 15px;
+  background: #f8f9ff;
+  transition: transform 0.3s ease;
+}
+
+.benefit-card:hover {
+  transform: translateY(-5px);
+}
+
+.benefit-icon {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+  color: white;
+  font-size: 1.5rem;
+}
+
+.benefit-card h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin: 0 0 0.5rem 0;
+}
+
+.benefit-card p {
+  font-size: 0.9rem;
+  color: #6c757d;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Right Column - Order Details */
+.coin-shop-right {
+  position: sticky;
+  top: 2rem;
+}
+
+.order-details-card {
+  background: white;
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  position: sticky;
+  top: 2rem;
+}
+
+.order-details-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin: 0 0 1.5rem 0;
+  text-align: center;
+}
+
+.order-details-content {
+  margin-bottom: 2rem;
+}
+
+.order-detail-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.order-detail-row:last-child {
+  border-bottom: none;
+}
+
+.order-detail-row.total {
+  font-weight: 700;
+  font-size: 1.1rem;
+  border-top: 2px solid #e9ecef;
+  border-bottom: none;
+  padding-top: 1rem;
+  margin-top: 0.5rem;
+}
+
+.order-amount, .order-coins, .order-total {
+  font-weight: 600;
+  color: #667eea;
+}
+
+.order-total {
+  font-size: 1.2rem;
+}
+
+.purchase-button {
+  width: 100%;
+  padding: 1rem;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  border: none;
+  border-radius: 15px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-bottom: 2rem;
+}
+
+.purchase-button:hover:not(.disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+}
+
+.purchase-button.disabled {
+  background: #e9ecef;
+  color: #6c757d;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* Current Promotions */
+.current-promotions {
+  border-top: 1px solid #e9ecef;
+  padding-top: 1.5rem;
+}
+
+.current-promotions h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin: 0 0 1rem 0;
+}
+
+.promotion-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.5rem 0;
+  font-size: 0.9rem;
+  color: #6c757d;
+}
+
+.promotion-item i {
+  color: #667eea;
+  font-size: 1rem;
+}
+
+/* Loading and Error States */
+.coin-shop-loading, .coin-shop-error {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+  font-size: 1.2rem;
+  color: #6c757d;
+}
+
+.coin-shop-error {
+  color: #dc3545;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .coin-shop-container {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .coin-shop-right {
+    position: static;
+  }
+  
+  .order-details-card {
+    position: static;
+  }
+}
+
+@media (max-width: 768px) {
+  .coin-shop-page {
+    padding: 1rem;
+  }
+  
+  .packages-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .payment-methods-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .benefits-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .coin-package {
+    padding: 1rem;
+    min-height: 100px;
+  }
+  
+  .package-coins {
+    font-size: 1.2rem;
+  }
+  
+  .package-price {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .packages-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .coin-package {
+    min-height: 80px;
+  }
+  
+  .section-title {
+    font-size: 1.3rem;
+  }
+  
+  .order-details-title {
+    font-size: 1.3rem;
+  }
+} 

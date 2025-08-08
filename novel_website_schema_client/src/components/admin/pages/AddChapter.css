@@ -1,0 +1,459 @@
+/* ========================================
+   ADD CHAPTER COMPONENT STYLES
+   ======================================== */
+
+/* Main Container */
+.add-chapter-container {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  min-height: 100vh;
+}
+
+/* ========================================
+   HEADER SECTION
+   ======================================== */
+.add-chapter-container .add-chapter-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.add-chapter-container .add-chapter-header h1 {
+  margin: 0;
+  color: #495057;
+  font-size: 1.75rem;
+  font-weight: 600;
+}
+
+.add-chapter-container .add-chapter-back-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  color: #495057;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 0.9rem;
+}
+
+.add-chapter-container .add-chapter-back-btn:hover {
+  background: #e9ecef;
+  color: #212529;
+}
+
+/* ========================================
+   MAIN CONTENT
+   ======================================== */
+.add-chapter-container .add-chapter-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* ========================================
+   STORY INFO SECTION
+   ======================================== */
+.add-chapter-container .add-chapter-story-info {
+  display: flex;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  background: #f8f9fa;
+  border-radius: 12px;
+  border: 1px solid #e9ecef;
+}
+
+.add-chapter-container .add-chapter-story-cover {
+  position: relative;
+  width: 120px;
+  height: 160px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  flex-shrink: 0;
+}
+
+.add-chapter-container .add-chapter-story-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.add-chapter-container .add-chapter-cover-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #f8f9fa;
+  border: 2px dashed #dee2e6;
+  color: #6c757d;
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+.add-chapter-container .add-chapter-cover-placeholder i {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  opacity: 0.6;
+}
+
+.add-chapter-container .add-chapter-story-details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.add-chapter-container .add-chapter-story-details h2 {
+  margin: 0;
+  color: #495057;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.add-chapter-container .add-chapter-story-author,
+.add-chapter-container .add-chapter-story-date,
+.add-chapter-container .add-chapter-story-chapters {
+  margin: 0;
+  color: #6c757d;
+  font-size: 0.9rem;
+}
+
+.add-chapter-container .add-chapter-story-author {
+  color: #667eea;
+  font-weight: 500;
+}
+
+/* ========================================
+   FORM SECTION
+   ======================================== */
+.add-chapter-container .add-chapter-form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.add-chapter-container .add-chapter-form-section {
+  background: #f8f9fa;
+  border-radius: 12px;
+  border: 1px solid #e9ecef;
+  padding: 1.5rem;
+}
+
+.add-chapter-container .add-chapter-form-section h3 {
+  margin: 0 0 1.5rem 0;
+  color: #495057;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.add-chapter-container .add-chapter-form-group {
+  margin-bottom: 1.5rem;
+}
+
+.add-chapter-container .add-chapter-form-group:last-child {
+  margin-bottom: 0;
+}
+
+.add-chapter-container .add-chapter-form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #495057;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.add-chapter-container .add-chapter-input,
+.add-chapter-container .add-chapter-textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+  background: white;
+  color: #495057;
+}
+
+.add-chapter-container .add-chapter-input:focus,
+.add-chapter-container .add-chapter-textarea:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.add-chapter-container .add-chapter-textarea {
+  resize: vertical;
+  min-height: 400px;
+  font-family: inherit;
+  line-height: 1.6;
+}
+
+.add-chapter-container .add-chapter-input-error,
+.add-chapter-container .add-chapter-textarea-error {
+  border-color: #dc3545;
+  box-shadow: 0 0 0 3px rgba(220, 53, 69, 0.1);
+}
+
+.add-chapter-container .add-chapter-input-error:focus,
+.add-chapter-container .add-chapter-textarea-error:focus {
+  border-color: #dc3545;
+  box-shadow: 0 0 0 3px rgba(220, 53, 69, 0.1);
+}
+
+.add-chapter-container .add-chapter-error-message {
+  display: block;
+  margin-top: 0.5rem;
+  color: #dc3545;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.add-chapter-container .add-chapter-content-info {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.5rem;
+  font-size: 0.8rem;
+  color: #6c757d;
+}
+
+/* ========================================
+   SUBMIT ERROR
+   ======================================== */
+.add-chapter-container .add-chapter-submit-error {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem;
+  background: #f8d7da;
+  border: 1px solid #f5c6cb;
+  border-radius: 8px;
+  color: #721c24;
+  font-size: 0.9rem;
+}
+
+.add-chapter-container .add-chapter-submit-error i {
+  font-size: 1rem;
+}
+
+/* ========================================
+   FORM ACTIONS
+   ======================================== */
+.add-chapter-container .add-chapter-form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #e9ecef;
+}
+
+.add-chapter-container .add-chapter-cancel-btn {
+  padding: 0.75rem 1.5rem;
+  background: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  color: #495057;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.add-chapter-container .add-chapter-cancel-btn:hover:not(:disabled) {
+  background: #e9ecef;
+  color: #212529;
+}
+
+.add-chapter-container .add-chapter-submit-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+  border: none;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.add-chapter-container .add-chapter-submit-btn:hover:not(:disabled) {
+  background: linear-gradient(135deg, #218838 0%, #1ea085 100%);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(40, 167, 69, 0.3);
+}
+
+.add-chapter-container .add-chapter-submit-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* ========================================
+   LOADING STATE
+   ======================================== */
+.add-chapter-container .add-chapter-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem;
+  color: #667eea;
+}
+
+.add-chapter-container .add-chapter-loading i {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.add-chapter-container .add-chapter-loading p {
+  margin: 0;
+  color: #495057;
+  font-size: 1rem;
+}
+
+/* ========================================
+   ANIMATIONS
+   ======================================== */
+.add-chapter-container .spin {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+   ======================================== */
+@media (max-width: 768px) {
+  .add-chapter-container {
+    padding: 1rem;
+    margin: 1rem;
+  }
+  
+  .add-chapter-container .add-chapter-header {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+  
+  .add-chapter-container .add-chapter-story-info {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .add-chapter-container .add-chapter-story-cover {
+    width: 100px;
+    height: 133px;
+  }
+  
+  .add-chapter-container .add-chapter-form-actions {
+    flex-direction: column;
+  }
+  
+  .add-chapter-container .add-chapter-cancel-btn,
+  .add-chapter-container .add-chapter-submit-btn {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .add-chapter-container .add-chapter-content-info {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .add-chapter-container {
+    padding: 0.75rem;
+    margin: 0.5rem;
+  }
+  
+  .add-chapter-container .add-chapter-header h1 {
+    font-size: 1.5rem;
+  }
+  
+  .add-chapter-container .add-chapter-story-details h2 {
+    font-size: 1.25rem;
+  }
+  
+  .add-chapter-container .add-chapter-form-section {
+    padding: 1rem;
+  }
+  
+  .add-chapter-container .add-chapter-textarea {
+    min-height: 300px;
+  }
+}
+
+/* ========================================
+   UTILITY CLASSES
+   ======================================== */
+.add-chapter-container .hidden {
+  display: none !important;
+}
+
+.add-chapter-container .text-center {
+  text-align: center;
+}
+
+.add-chapter-container .text-left {
+  text-align: left;
+}
+
+.add-chapter-container .text-right {
+  text-align: right;
+}
+
+.add-chapter-container .mb-0 {
+  margin-bottom: 0;
+}
+
+.add-chapter-container .mb-1 {
+  margin-bottom: 0.25rem;
+}
+
+.add-chapter-container .mb-2 {
+  margin-bottom: 0.5rem;
+}
+
+.add-chapter-container .mb-3 {
+  margin-bottom: 1rem;
+}
+
+.add-chapter-container .mt-0 {
+  margin-top: 0;
+}
+
+.add-chapter-container .mt-1 {
+  margin-top: 0.25rem;
+}
+
+.add-chapter-container .mt-2 {
+  margin-top: 0.5rem;
+}
+
+.add-chapter-container .mt-3 {
+  margin-top: 1rem;
+} 

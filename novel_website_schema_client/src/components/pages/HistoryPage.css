@@ -1,0 +1,130 @@
+
+
+.history-list-modern {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@media (max-width: 1000px) {
+  .history-list-modern {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
+  .history-list-modern {
+    grid-template-columns: 1fr;
+  }
+}
+
+.history-row-modern {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  min-height: 140px;
+  width: 450px;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(80,80,120,0.06);
+  padding: 16px 24px;
+  cursor: pointer;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+.history-row-modern:hover {
+  box-shadow: 0 4px 24px rgba(80,80,120,0.13);
+  transform: translateY(-2px) scale(1.01);
+}
+.history-cover-wrap {
+  width: 90px;
+  min-width: 90px;
+  height: 120px;
+  margin-right: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.history-cover-img {
+  width: 90px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 1px 6px rgba(80,80,120,0.10);
+}
+.history-info-block {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+.history-title-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2px;
+}
+.history-story-title {
+  font-size: 1.08rem;
+  font-weight: bold;
+  color: #222;
+  margin-right: 8px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.history-chapter-title {
+  color: #4f8cff;
+  font-size: 1rem;
+  margin-bottom: 2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: left;
+}
+.history-author {
+  color: #b48be3;
+  font-size: 0.98rem;
+  margin-bottom: 6px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: left;
+}
+.history-progress-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 14px;
+  margin-bottom: 2px;
+}
+.history-progress-percent {
+  color: #a259e6;
+  font-weight: 500;
+  font-size: 15px;
+  margin-left: 12px;
+}
+.history-progress-bar-bg {
+  width: 100%;
+  height: 5px;
+  background: #e3e3ff;
+  border-radius: 6px;
+  overflow: hidden;
+  margin-top: 2px;
+}
+.history-progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, #6c63ff, #43d17a);
+  border-radius: 6px;
+  transition: width 0.3s;
+}
+@media (max-width: 700px) {
+  .history-row-modern {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 12px 8px;
+  }
+  .history-cover-wrap {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+} 

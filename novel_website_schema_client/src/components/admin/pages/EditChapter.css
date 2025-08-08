@@ -1,0 +1,398 @@
+/* ========================================
+   EDIT CHAPTER COMPONENT STYLES
+   ======================================== */
+
+.edit-chapter-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Header Section */
+.edit-chapter-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+.edit-chapter-back-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  background: #6c757d;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.edit-chapter-back-btn:hover {
+  background: #5a6268;
+  transform: translateY(-1px);
+}
+
+.edit-chapter-header h1 {
+  margin: 0;
+  color: #2c3e50;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+/* Content Layout */
+.edit-chapter-content {
+  display: grid;
+  gap: 30px;
+}
+
+/* Story Information Section */
+.edit-chapter-story-info {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 12px;
+  color: white;
+}
+
+.edit-chapter-story-cover {
+  position: relative;
+  width: 120px;
+  height: 160px;
+  flex-shrink: 0;
+}
+
+.edit-chapter-story-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.edit-chapter-cover-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  border: 2px dashed rgba(255, 255, 255, 0.3);
+}
+
+.edit-chapter-cover-placeholder i {
+  font-size: 24px;
+  margin-bottom: 8px;
+  opacity: 0.7;
+}
+
+.edit-chapter-cover-placeholder span {
+  font-size: 12px;
+  opacity: 0.8;
+}
+
+.edit-chapter-story-details {
+  flex: 1;
+}
+
+.edit-chapter-story-details h2 {
+  margin: 0 0 10px 0;
+  font-size: 24px;
+  font-weight: 700;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.edit-chapter-story-author,
+.edit-chapter-story-date,
+.edit-chapter-story-chapters {
+  margin: 8px 0;
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+/* Form Sections */
+.edit-chapter-form {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.edit-chapter-form-section {
+  background: #f8f9fa;
+  padding: 25px;
+  border-radius: 12px;
+  border: 1px solid #e9ecef;
+}
+
+.edit-chapter-form-section h3 {
+  margin: 0 0 20px 0;
+  color: #2c3e50;
+  font-size: 20px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.edit-chapter-form-section h3::before {
+  content: '';
+  width: 4px;
+  height: 20px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 2px;
+}
+
+/* Form Groups */
+.edit-chapter-form-group {
+  margin-bottom: 20px;
+}
+
+.edit-chapter-form-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: #495057;
+  font-weight: 600;
+  font-size: 14px;
+  text-align: left;
+}
+
+.edit-chapter-input,
+.edit-chapter-textarea {
+  width: 100%;
+  padding: 12px 16px;
+  border: 2px solid #e9ecef;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  background: white;
+}
+
+.edit-chapter-input:focus,
+.edit-chapter-textarea:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.edit-chapter-input-error,
+.edit-chapter-textarea-error {
+  border-color: #dc3545;
+  box-shadow: 0 0 0 3px rgba(220, 53, 69, 0.1);
+}
+
+.edit-chapter-textarea {
+  resize: vertical;
+  min-height: 400px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+}
+
+/* Error Messages */
+.edit-chapter-error-message {
+  display: block;
+  margin-top: 6px;
+  color: #dc3545;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.edit-chapter-error-alert {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 16px;
+  background: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.edit-chapter-error-alert i {
+  font-size: 16px;
+}
+
+/* Content Statistics */
+.edit-chapter-content-stats {
+  display: flex;
+  gap: 20px;
+  margin-top: 15px;
+  padding: 15px;
+  background: white;
+  border-radius: 8px;
+  border: 1px solid #e9ecef;
+}
+
+.edit-chapter-stat-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #6c757d;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.edit-chapter-stat-item i {
+  color: #667eea;
+  font-size: 14px;
+}
+
+/* Action Buttons */
+.edit-chapter-actions {
+  display: flex;
+  gap: 15px;
+  justify-content: flex-end;
+  padding-top: 20px;
+  border-top: 1px solid #e9ecef;
+}
+
+.edit-chapter-cancel-btn,
+.edit-chapter-delete-btn,
+.edit-chapter-save-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 120px;
+  justify-content: center;
+}
+
+.edit-chapter-cancel-btn {
+  background: #6c757d;
+  color: white;
+}
+
+.edit-chapter-cancel-btn:hover:not(:disabled) {
+  background: #5a6268;
+  transform: translateY(-1px);
+}
+
+.edit-chapter-delete-btn {
+  background: #dc3545;
+  color: white;
+}
+
+.edit-chapter-delete-btn:hover:not(:disabled) {
+  background: #c82333;
+  transform: translateY(-1px);
+}
+
+.edit-chapter-save-btn {
+  background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+  color: white;
+}
+
+.edit-chapter-save-btn:hover:not(:disabled) {
+  background: linear-gradient(135deg, #218838 0%, #1ea085 100%);
+  transform: translateY(-1px);
+}
+
+.edit-chapter-cancel-btn:disabled,
+.edit-chapter-delete-btn:disabled,
+.edit-chapter-save-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Loading State */
+.edit-chapter-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+  color: #6c757d;
+}
+
+.edit-chapter-loading i {
+  font-size: 32px;
+  margin-bottom: 15px;
+  animation: spin 1s linear infinite;
+}
+
+.edit-chapter-loading p {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+/* Animations */
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .edit-chapter-container {
+    padding: 15px;
+    margin: 10px;
+  }
+
+  .edit-chapter-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .edit-chapter-header h1 {
+    font-size: 24px;
+  }
+
+  .edit-chapter-story-info {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .edit-chapter-story-cover {
+    align-self: center;
+  }
+
+  .edit-chapter-content-stats {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .edit-chapter-actions {
+    flex-direction: column;
+  }
+
+  .edit-chapter-cancel-btn,
+  .edit-chapter-delete-btn,
+  .edit-chapter-save-btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .edit-chapter-form-section {
+    padding: 20px;
+  }
+
+  .edit-chapter-form-section h3 {
+    font-size: 18px;
+  }
+
+  .edit-chapter-input,
+  .edit-chapter-textarea {
+    padding: 10px 12px;
+    font-size: 13px;
+  }
+} 

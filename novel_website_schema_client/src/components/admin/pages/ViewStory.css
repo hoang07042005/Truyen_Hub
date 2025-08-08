@@ -1,0 +1,794 @@
+/* ========================================
+   VIEW STORY COMPONENT STYLES
+   ======================================== */
+
+/* Main Container */
+.view-story-container {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* ========================================
+   HEADER SECTION
+   ======================================== */
+.view-story-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.view-story-header h1 {
+  margin: 0;
+  color: #495057;
+  font-size: 1.75rem;
+  font-weight: 600;
+}
+
+/* Header Buttons */
+.view-story-header .back-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  color: #495057;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 0.9rem;
+}
+
+.view-story-header .back-btn:hover {
+  background: #e9ecef;
+  color: #212529;
+}
+
+.view-story-header .header-actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.view-story-header .edit-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border: none;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 0.9rem;
+  font-weight: 500;
+  width: 125px;
+}
+
+
+.view-story-header .edit-btn:hover {
+  background: linear-gradient(135deg, #5a6fd8 0%, #6a4190 100%);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+/* ========================================
+   MAIN CONTENT
+   ======================================== */
+.view-story-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* ========================================
+   STORY MAIN INFO SECTION
+   ======================================== */
+.view-story-content .story-main-info {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 2rem;
+  padding: 1.5rem;
+  background: #f8f9fa;
+  border-radius: 12px;
+  border: 1px solid #e9ecef;
+}
+
+/* Story Cover Section */
+.view-story-content .story-cover-section {
+  display: flex;
+  justify-content: center;
+}
+
+.view-story-content .story-cover {
+  position: relative;
+  width: 250px;
+  height: 350px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.view-story-content .cover-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.view-story-content .cover-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #f8f9fa;
+  border: 2px dashed #dee2e6;
+  color: #6c757d;
+  font-size: 0.9rem;
+  text-align: left;
+}
+
+.view-story-content .cover-placeholder i {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  opacity: 0.6;
+}
+
+/* Story Details Section */
+.view-story-content .story-details {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.view-story-content .story-title-section {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.view-story-content .story-title-section h2 {
+  margin: 0;
+  color: #495057;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+/* Status Badge */
+.view-story-content .status-badge {
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.view-story-content .status-badge.status-ongoing {
+  background: #e3f2fd;
+  color: #1976d2;
+}
+
+.view-story-content .status-badge.status-completed {
+  background: #e8f5e8;
+  color: #388e3c;
+}
+
+.view-story-content .status-badge.status-paused {
+  background: #fff3e0;
+  color: #f57c00;
+}
+
+.view-story-content .status-badge.status-unknown {
+  background: #f5f5f5;
+  color: #757575;
+}
+
+/* Story Meta Information */
+.view-story-content .story-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.view-story-content .meta-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #6c757d;
+  font-size: 0.9rem;
+}
+
+.view-story-content .meta-item i {
+  width: 16px;
+  color: #667eea;
+}
+
+/* Story Description */
+.view-story-content .story-description {
+  background: white;
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid #e9ecef;
+}
+
+.view-story-content .story-description h3 {
+  margin: 0 0 0.5rem 0;
+  color: #495057;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.view-story-content .story-description p {
+  margin: 0;
+  color: #6c757d;
+  line-height: 1.6;
+  white-space: pre-wrap;
+  text-align: left;
+}
+
+/* Story Categories */
+.view-story-content .story-categories h3 {
+  margin: 0 0 0.5rem 0;
+  color: #495057;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.view-story-content .category-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.view-story-content .category-tag {
+  padding: 0.25rem 0.75rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+/* ========================================
+   STATISTICS SECTION
+   ======================================== */
+.view-story-content .story-stats-section {
+  padding: 1.5rem;
+  background: #f8f9fa;
+  border-radius: 12px;
+  border: 1px solid #e9ecef;
+}
+
+.view-story-content .story-stats-section h3 {
+  margin: 0 0 1rem 0;
+  color: #495057;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.view-story-content .stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.view-story-content .stat-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background: white;
+  border-radius: 8px;
+  border: 1px solid #e9ecef;
+  transition: all 0.2s ease;
+}
+
+.view-story-content .stat-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.view-story-content .stat-icon {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-radius: 12px;
+  font-size: 1.5rem;
+}
+
+.view-story-content .stat-content {
+  flex: 1;
+}
+
+.view-story-content .stat-value {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #495057;
+  line-height: 1;
+}
+
+.view-story-content .stat-label {
+  font-size: 0.8rem;
+  color: #6c757d;
+  margin-top: 0.25rem;
+}
+
+/* ========================================
+   CHAPTERS SECTION
+   ======================================== */
+.view-story-content .chapters-section {
+  padding: 1.5rem;
+  background: #f8f9fa;
+  border-radius: 12px;
+  border: 1px solid #e9ecef;
+}
+
+.view-story-content .section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.view-story-content .section-header h3 {
+  margin: 0;
+  color: #495057;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.view-story-content .add-chapter-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+  border: none;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.view-story-content .add-chapter-btn:hover {
+  background: linear-gradient(135deg, #218838 0%, #1ea085 100%);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(40, 167, 69, 0.3);
+}
+
+/* Chapters List */
+.view-story-content .chapters-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.view-story-content .chapter-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  background: white;
+  border-radius: 8px;
+  border: 1px solid #e9ecef;
+  transition: all 0.2s ease;
+}
+
+.view-story-content .chapter-item:hover {
+  background: #f8f9fa;
+  border-color: #667eea;
+}
+
+.view-story-content .chapter-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  text-align: left;
+}
+
+.view-story-content .chapter-number {
+  font-size: 0.8rem;
+  color: #667eea;
+  font-weight: 600;
+  text-align: left;
+}
+
+.view-story-content .chapter-title {
+  font-size: 1rem;
+  color: #495057;
+  font-weight: 500;
+}
+
+.view-story-content .chapter-meta {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.view-story-content .chapter-date {
+  font-size: 0.8rem;
+  color: #6c757d;
+}
+
+.view-story-content .chapter-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.view-story-content .view-chapter-btn,
+.view-story-content .edit-chapter-btn {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 0.8rem;
+}
+
+.view-story-content .view-chapter-btn {
+  background: #e3f2fd;
+  color: #1976d2;
+}
+
+.view-story-content .view-chapter-btn:hover {
+  background: #1976d2;
+  color: white;
+}
+
+.view-story-content .edit-chapter-btn {
+  background: #fff3e0;
+  color: #f57c00;
+}
+
+.view-story-content .edit-chapter-btn:hover {
+  background: #f57c00;
+  color: white;
+}
+
+/* Chapter Lock Status */
+.view-story-content .chapter-lock-status {
+  margin-top: 0.5rem;
+}
+
+.view-story-content .lock-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.view-story-content .lock-badge.locked {
+  background: #fff3cd;
+  color: #856404;
+  border: 1px solid #ffeaa7;
+}
+
+.view-story-content .lock-badge.unlocked {
+  background: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.view-story-content .lock-badge i {
+  font-size: 0.8rem;
+}
+
+/* Chapter Action Buttons */
+.view-story-content .lock-chapter-btn,
+.view-story-content .price-chapter-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 0.9rem;
+}
+
+.view-story-content .lock-chapter-btn.lock {
+  background: #dc3545;
+  color: white;
+}
+
+.view-story-content .lock-chapter-btn.lock:hover {
+  background: #c82333;
+  transform: translateY(-1px);
+}
+
+.view-story-content .lock-chapter-btn.unlock {
+  background: #28a745;
+  color: white;
+}
+
+.view-story-content .lock-chapter-btn.unlock:hover {
+  background: #218838;
+  transform: translateY(-1px);
+}
+
+.view-story-content .price-chapter-btn {
+  background: #ffc107;
+  color: #212529;
+}
+
+.view-story-content .price-chapter-btn:hover {
+  background: #e0a800;
+  transform: translateY(-1px);
+}
+
+.view-story-content .view-more-chapters {
+  text-align: left;
+  padding: 1rem;
+}
+
+.view-story-content .view-more-chapters button {
+  padding: 0.5rem 1rem;
+  background: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  color: #495057;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 0.9rem;
+}
+
+.view-story-content .view-more-chapters button:hover {
+  background: #e9ecef;
+  color: #212529;
+}
+
+/* ========================================
+   NO CHAPTERS STATE
+   ======================================== */
+.view-story-content .no-chapters {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem;
+  background: white;
+  border-radius: 8px;
+  border: 2px dashed #dee2e6;
+  color: #6c757d;
+  text-align: left;
+}
+
+.view-story-content .no-chapters i {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  opacity: 0.6;
+}
+
+.view-story-content .no-chapters p {
+  margin: 0 0 1rem 0;
+  font-size: 1rem;
+}
+
+.view-story-content .add-first-chapter-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+  border: none;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.view-story-content .add-first-chapter-btn:hover {
+  background: linear-gradient(135deg, #218838 0%, #1ea085 100%);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(40, 167, 69, 0.3);
+}
+
+/* ========================================
+   LOADING AND ERROR STATES
+   ======================================== */
+.view-story-container .loading-spinner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem;
+  color: #667eea;
+}
+
+.view-story-container .loading-spinner i {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.view-story-container .loading-spinner p {
+  margin: 0;
+  color: #495057;
+  font-size: 1rem;
+}
+
+.view-story-container .error-message {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem;
+  color: #dc3545;
+  text-align: left;
+}
+
+.view-story-container .error-message i {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  opacity: 0.6;
+}
+
+.view-story-container .error-message p {
+  margin: 0 0 1rem 0;
+  font-size: 1rem;
+}
+
+/* ========================================
+   ANIMATIONS
+   ======================================== */
+.view-story-container .spin {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+   ======================================== */
+@media (max-width: 768px) {
+  .view-story-container {
+    padding: 1rem;
+    margin: 1rem;
+  }
+  
+  .view-story-header {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+  
+  .view-story-content .story-main-info {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .view-story-content .story-cover {
+    width: 200px;
+    height: 280px;
+  }
+  
+  .view-story-content .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .view-story-content .chapter-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  
+  .view-story-content .chapter-meta {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+
+/* ========================================
+   UTILITY CLASSES
+   ======================================== */
+.view-story-container .hidden {
+  display: none !important;
+}
+
+.view-story-container .text-center {
+  text-align: center;
+}
+
+.view-story-container .text-left {
+  text-align: left;
+}
+
+.view-story-container .text-right {
+  text-align: right;
+}
+
+.view-story-container .mb-0 {
+  margin-bottom: 0;
+}
+
+.view-story-container .mb-1 {
+  margin-bottom: 0.25rem;
+}
+
+.view-story-container .mb-2 {
+  margin-bottom: 0.5rem;
+}
+
+.view-story-container .mb-3 {
+  margin-bottom: 1rem;
+}
+
+.view-story-container .mt-0 {
+  margin-top: 0;
+}
+
+.view-story-container .mt-1 {
+  margin-top: 0.25rem;
+}
+
+.view-story-container .mt-2 {
+  margin-top: 0.5rem;
+}
+
+.view-story-container .mt-3 {
+  margin-top: 1rem;
+} 
+
+/* ========================================
+   FORCE LEFT ALIGNMENT - HIGH SPECIFICITY
+   ======================================== */
+.view-story-container .view-story-content .chapter-info {
+  text-align: left !important;
+}
+
+.view-story-container .view-story-content .chapter-number {
+  text-align: left !important;
+}
+
+.view-story-container .view-story-content .chapter-title {
+  text-align: left !important;
+}
+
+.view-story-container .view-story-content .cover-placeholder {
+  text-align: left !important;
+}
+
+.view-story-container .view-story-content .view-more-chapters {
+  text-align: left !important;
+}
+
+.view-story-container .view-story-content .no-chapters {
+  text-align: left !important;
+}
+
+.view-story-container .error-message {
+  text-align: left !important;
+} 
